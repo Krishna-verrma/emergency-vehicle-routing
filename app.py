@@ -11,6 +11,8 @@ from typing import Dict, List, Tuple, Optional, Any
 # Ensure Matplotlib can write cache files in sandboxed/cloud environments
 os.environ.setdefault("MPLCONFIGDIR", tempfile.gettempdir())
 
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
